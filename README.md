@@ -19,23 +19,45 @@
   - [ ] Write a `README.md` file.
   - [ ] Push the final project to GitHub.
 
-## Phase 2: Game Development Foundations (November - December)
+Phase 2: Applied AI & Machine Learning (November - December)
+Computer Vision: Real-Time Object Detector 📸
+This project will use a pre-trained model to detect and identify common objects in a live webcam feed, drawing bounding boxes around them.
 
-### 2D Unity Game (using C#) 🎮
-- [ ] Research & Learning:
-  - [ ] Complete a beginner tutorial on the Unity Learn platform (e.g., "Ruby's Adventure").
-  - [ ] Decide on a simple game concept (e.g., top-down shooter, simple platformer).
-  - [ ] Find or create basic art assets (sprites, tilesets).
-- [ ] Development:
-  - [ ] Create the main player character GameObject and write movement scripts.
-  - [ ] Build one complete game level using a Scene and Tilemaps.
-  - [ ] Implement core game mechanics (e.g., shooting, jumping, collecting items) using C# scripts and Unity's physics engine.
-  - [ ] Add a simple UI using the Canvas system (score, health).
-- [ ] Polishing:
-  - [ ] Add sound effects and music using AudioSource components.
-  - [ ] Fix bugs.
-  - [ ] Build the game to a playable executable for Windows/Mac.
-  - [ ] Push the final project to GitHub with a great README and screenshots.
+[ ] Research & Learning:
+
+[ ] Deepen CV Knowledge: Go beyond classification. Study the fundamental concepts of object detection architectures like YOLO (You Only Look Once) or SSD (Single Shot Detector). Focus on what a "bounding box" and "confidence score" represent.
+
+[ ] Leverage Pre-trained Models: The key skill here isn't training a huge model from scratch, but applying one effectively. Learn to load and use state-of-the-art, pre-trained object detection models from sources like PyTorch Hub, TorchVision, or Hugging Face.
+
+[ ] Master OpenCV: Get comfortable with the OpenCV library (cv2) in Python. Specifically, learn how to capture video from a webcam, process frames (images) from the video stream, and draw shapes and text on them.
+
+[ ] Development:
+
+[ ] Project Setup: Create a new Python project with a virtual environment. Install torch, torchvision, numpy, and opencv-python.
+
+[ ] Load the Model: Write a script to load a pre-trained model (e.g., YOLOv5, or torchvision.models.detection.ssd300_vgg16) and set it to evaluation mode (model.eval()).
+
+[ ] Create the Inference Loop:
+
+[ ] Write the main loop that captures a frame from the webcam.
+
+[ ] Preprocess the frame to the format the model expects (e.g., resize, convert to a tensor, normalize).
+
+[ ] Pass the tensor through the model to get predictions.
+
+[ ] Loop through the predictions and filter out detections with low confidence scores.
+
+[ ] Visualize the Output: For each high-confidence detection, use OpenCV functions (cv2.rectangle, cv2.putText) to draw the bounding box and the object's class name on the original frame. Display the resulting frame in a window.
+
+[ ] Polishing:
+
+[ ] Create a Simple UI (Optional but Recommended): Instead of just a raw OpenCV window, wrap your application in a simple GUI using Tkinter or PyQt. Adding a "Start/Stop Camera" button makes it feel like a complete piece of software.
+
+[ ] Add Performance Metrics: Calculate and display the Frames Per Second (FPS) to show how efficiently your model is running.
+
+[ ] Write a Top-Tier README.md: This is crucial for a visual project. Explain the project, the technology used, and most importantly, include a GIF of the final application in action.
+
+[ ] Push to GitHub: Ensure the code is clean, commented, and the repository is well-organized.
 
 ## Phase 3: Semester Break C++ Deep Dive (January)
 
